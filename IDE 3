@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Complex
+{   
+    int real;
+    int imaginary;
+    Complex(int real, int inaginary)
+    {
+        this.real=real;
+        this.imaginary=imaginary;
+    }
+    public static Complex sub(Complex x, Complex y)
+	{
+	  return new Complex(x.real-y.real,x.imaginary-y.imaginary);
+	}
+}
+	class Eg
+	{
+	    public static void main(String[] args)
+	    {
+	        Complex x=new Complex(3,4);
+	        Complex y=new Complex(2,3);
+	        Complex z=Complex.sub(x,y);
+	        System.out.println(z.real+"-"+z.imaginary+"i");
+	    }
+	}
