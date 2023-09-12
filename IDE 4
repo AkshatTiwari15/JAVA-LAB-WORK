@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Name
+{
+    String name;
+    String surname;
+    Name(String name,String surname)
+    {
+      this.name=name;
+      this.surname=surname;
+    }
+    public static Name funct(Name x, Name y)
+    {
+        return new Name(x.name+y.surname,y.name+x.surname);
+    }
+}
+ class Eg 
+ {
+     public static void main(String[]args)
+ {
+    Name x=new Name("Aishwarya ","Rai ");
+    Name y=new Name("Abhishek ","Bacchan ");
+    Name z=Name.funct(x,y);
+    System.out.println(z.name + z.surname);
+ }
+}
