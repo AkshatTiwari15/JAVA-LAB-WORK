@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+class Banking 
+{
+    String account = "0827221015";
+    int balance = 1527;
+
+    public static void printing(String account, int amount, int balance)
+    {
+        if (balance > amount)
+        {
+            balance = balance - amount;
+            System.out.println(balance);
+        }
+        if (balance < amount) 
+        {
+            balance = balance + amount;
+            System.out.println(balance);
+        }
+    }
+}
+
+class Withdraw extends Thread
+{
+    public void run() 
+    {
+        Banking b = new Banking();
+        b.printing("0827221015", 0, 0);
+    }
+}
+
+class Deposit extends Thread
+{
+    public void run() {
+        Banking b = new Banking();
+        b.printing("0827221015", 0, 1527);
+    }
+}
+
+class Main {
+    public static void main(String[] args)
+    {
+        Withdraw t1 = new Withdraw();
+        t1.start();
+        Deposit t2 = new Deposit();
+        t2.start();
+    }
+}
