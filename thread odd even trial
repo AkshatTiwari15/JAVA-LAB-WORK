@@ -1,0 +1,58 @@
+import java.util.Scanner;
+class Print 
+{
+    public void printing(int n, int n2, int n3)
+    {
+    if(n3==0)
+    {
+        for(int i=n1;i<=n2;i++)
+        {
+            if(i%2==0)
+           System.out.println(i);
+        }
+    }
+    if(n3==1)
+    {
+        
+    }
+    else
+    {
+        System.out.println("odd");
+    }
+    }
+}
+class Thread1 extends Thread
+{
+    public static void main(String[]args)
+        {
+            Thread1 thread=new Thread1();
+            thread.start();
+            System.out.println("even");
+        }
+        void run()
+        {
+            Print p=new Print();
+            p.printing(1,50,0);
+            System.out.println("odd");
+        }
+
+}
+class Thread2 extends Thread
+{
+     public static void main(String[]args)
+     {
+    void run()
+       {
+          Print p=new Print();
+          p.printing(1,50,1);
+     }
+}
+class main
+{
+  public static void main(String[]args)
+  {
+      Thread1 t1=new Thread1()
+      t1.start();
+  }
+}
+
