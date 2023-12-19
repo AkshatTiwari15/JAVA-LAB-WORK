@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class NumberAdd
+{
+    public static <E extends Number>
+    double add(E num1,E num2)
+    {
+        return num1.doubleValue()+num2.doubleValue();
+    }
+    public static void main(String[]args)
+    {
+        int intNum1=5;
+        int intNum2=10;
+        float floatNum1=3.5f;
+        float floatNum2=2.7f;
+        
+        double result1=add(intNum1, intNum2);
+        double result2=add(floatNum1,floatNum2);
+        System.out.println("Sum of Integers: "+result1);
+        System.out.println("Sum of float: "+result2);
+    }
+}
