@@ -1,3 +1,5 @@
+//Thread odd even trial
+
 import java.util.Scanner;
 class Print 
 {
